@@ -145,7 +145,7 @@ function InvoiceModal(props) {
                     {props.currency} {props.subTotal}
                   </td>
                 </tr>
-                {props.taxAmmount != 0.0 && (
+                {props.taxAmmount !== 0.0 && (
                   <tr className="text-end">
                     <td></td>
                     <td className="fw-bold" style={{ width: "100px" }}>
@@ -156,7 +156,7 @@ function InvoiceModal(props) {
                     </td>
                   </tr>
                 )}
-                {props.discountAmmount != 0.0 && (
+                {props.discountAmmount !== 0.0 && (
                   <tr className="text-end">
                     <td></td>
                     <td className="fw-bold" style={{ width: "100px" }}>

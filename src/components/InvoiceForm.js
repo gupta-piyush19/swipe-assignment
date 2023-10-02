@@ -70,9 +70,9 @@ class InvoiceForm extends React.Component {
     var items = this.state.items;
     var subTotal = 0;
 
-    items.map(function (items) {
+    items.forEach(function (item) {
       subTotal = parseFloat(
-        subTotal + parseFloat(items.price) * parseInt(items.quantity)
+        subTotal + parseFloat(item.price) * parseInt(item.quantity)
       );
     });
 
@@ -116,7 +116,7 @@ class InvoiceForm extends React.Component {
     };
     var items = this.state.items.slice();
     var newItems = items.map(function (itemObj) {
-      if (itemObj.id == item.id) {
+      if (itemObj.id === item.id) {
         return {
           ...itemObj,
           [item.name]: item.value,
